@@ -1,0 +1,40 @@
+﻿
+@model List<invoiceRenderer.Controllers.Customer>
+@{
+    Layout = "_ReportLayout";
+}
+    <div class="container" style="padding-top: 20px">
+
+        
+
+        <h2>Pocetak</h2>
+        @*<p class="breakhere">Customer Details</p>*@
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Opis</th>
+                    <th>cena/kom</th>
+                    <th>kom</th>
+                    <th>cena</th>
+                    <th>ukupno</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.CustomerID</td>
+                        <td>@item.Name</td>
+                        <td>@item.Address</td>
+                        <td>@item.Country</td>
+                        <td>@item.City</td>
+                        <td>@item.Phoneno</td>
+                    </tr>
+
+                }
+
+            </tbody>
+        </table>
+    </div>

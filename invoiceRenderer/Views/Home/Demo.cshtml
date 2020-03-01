@@ -5,36 +5,117 @@
 }
     <div class="container" style="padding-top: 20px">
 
-        
 
-        <h2>Pocetak</h2>
-        @*<p class="breakhere">Customer Details</p>*@
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Opis</th>
-                    <th>cena/kom</th>
-                    <th>kom</th>
-                    <th>cena</th>
-                    <th>ukupno</th>
-                </tr>
-            </thead>
-            <tbody>
 
-                @foreach (var item in Model)
-                {
+        <div class="row" style="margin-bottom:20px">
+            <div class="col" style="padding: 0">
+                <div style="border: 1px solid black; float: right;padding:10px">
+                    <div align="center"><b>SIE DOO</b></div>
+                    <div align="center">Borivoja stojanovica 33/1 Beograd</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="margin-bottom:20px">
+            <div class="col" style="padding: 0">
+                <div style="border: 1px solid black; padding:10px">
+                    <div align="center">
+                        Ponuda D12124/19 za opremanje Apart Hotela
+                        stambeno-poslovnog objekta u ulici Starca Vujadina br. 8-10 u Zemunu
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <table class="table table-bordered table-condensed">
+                <thead>
                     <tr>
-                        <td>@item.CustomerID</td>
-                        <td>@item.Name</td>
-                        <td>@item.Address</td>
-                        <td>@item.Country</td>
-                        <td>@item.City</td>
-                        <td>@item.Phoneno</td>
+                        <th colspan="6"><div align="center">REKAPITULACIJA</div></th>
                     </tr>
+                    <tr>
+                        <th>#</th>
+                        <th>Opis</th>
+                        <th>cena/kom</th>
+                        <th>kom</th>
+                        <th>ukupno</th>
+                    </tr>
+                </thead>
+                <tbody>
 
-                }
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.CustomerID</td>
+                            <td>@item.Name</td>
+                            <td>@item.Address</td>
+                            <td>@item.Country</td>
+                            <td>@item.Phoneno</td>
+                        </tr>
+                        <tr>
+                            <td colspan="5">
+                                <div style="margin-left: 10px">
+                                    <table class="table table-bordered table-condensed" style="margin-bottom: 0">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Opis</th>
+                                                <th>cena/kom</th>
+                                                <th>kom</th>
+                                                <th>ukupno</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>@item.CustomerID.1</td>
+                                                <td>@item.Name</td>
+                                                <td>@item.Address</td>
+                                                <td>@item.Country</td>
+                                                <td>@item.Phoneno</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
 
-            </tbody>
-        </table>
+                    }
+                <tr>
+                    <td colspan="4">Ukupno:</td>
+                    <td>asd</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                Cenom ubuhvaćena izrada i montaža.
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                Rok isporuke i način plaćanja po dogovoru.
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col">
+                <div>Za Active Design d.o.o. </div>
+                <div>Dejan Gašić d.i.a.</div>
+                <div>+381 64 64 24 115</div>
+                <div>dejan@activedesign.rs</div>
+            </div>
+            <div class="col">
+                <br />
+                <br />
+                <div align="right">Datum</div>
+                <div align="right">12.12.2019</div>
+            </div>
+        </div>
     </div>
+<style>
+    td,th {
+        padding: 2px !important;
+    }
+</style>
